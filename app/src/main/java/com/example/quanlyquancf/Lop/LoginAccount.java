@@ -51,34 +51,6 @@ public class LoginAccount extends AppCompatActivity {
                 final ProgressDialog progressDialog = new ProgressDialog(LoginAccount.this);
                 progressDialog.setMessage("Xin chờ ...");
                 progressDialog.show();
-//                user.child("User").addChildEventListener(new ChildEventListener() {
-//                    @Override
-//                    public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-//
-//
-//
-//                    }
-//
-//                    @Override
-//                    public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-//
-//                    }
-//
-//                    @Override
-//                    public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
-//
-//                    }
-//
-//                    @Override
-//                    public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-//
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//                    }
-//                });
 
                 user.child("User").addValueEventListener(new ValueEventListener() {
                     @Override
@@ -91,7 +63,7 @@ public class LoginAccount extends AppCompatActivity {
                                 {
                                     progressDialog.dismiss();
                                     Toast.makeText(getApplicationContext(),"Đăng nhập thành công",Toast.LENGTH_LONG).show();
-                                    Intent intent = new Intent(getApplicationContext(), Home.class);
+                                    Intent intent = new Intent(getApplicationContext(), Table.class);
                                     startActivity(intent);
                                 }
                                 else
