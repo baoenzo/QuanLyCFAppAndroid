@@ -13,6 +13,9 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Log;
@@ -28,6 +31,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.quanlyquancf.DoiTuong.TableBan;
+import com.example.quanlyquancf.DoiTuong.User;
 import com.example.quanlyquancf.R;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.ChildEventListener;
@@ -42,6 +46,7 @@ import java.util.ArrayList;
 public class Table extends AppCompatActivity {
 
     TableLayout tb;
+    User account;
     private DrawerLayout drawer;
     DatabaseReference table;
     ArrayList<TableBan> banList = new ArrayList<>();
@@ -62,6 +67,23 @@ public class Table extends AppCompatActivity {
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+        GetAccount();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        View headerView = navigationView.getHeaderView(0);
+        TextView txtAccN = (TextView)headerView.findViewById(R.id.txtAccountName);
+        TextView txtType= (TextView)headerView.findViewById(R.id.txtAccountType);
+        txtAccN.setText(account.getDisplayname());
+        if(account.getType() == 0)
+        {
+            txtType.setText("Quản trị viên");
+            txtType.setTextColor(Color.parseColor("#FF0000"));
+        }
+        else
+        {
+            txtType.setText("Nhân viên");
+        }
+
         LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.activity_table, null);
         tb = (TableLayout) findViewById(R.id.tb1);
@@ -73,9 +95,18 @@ public class Table extends AppCompatActivity {
                 SetTable();
             }
         });
-     //   SetTable();
 
     }
+    private void GetAccount()
+    {
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        if(bundle != null) {
+            account = (User)bundle.getSerializable("u1");
+        }
+
+    }
+
     private void GetAllTable(final FirebaseCallBack firebaseCallBack)
     {
 

@@ -1,6 +1,8 @@
 package com.example.quanlyquancf.DoiTuong;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     private String Loginname;
     private String Displayname;
     private String Password;
