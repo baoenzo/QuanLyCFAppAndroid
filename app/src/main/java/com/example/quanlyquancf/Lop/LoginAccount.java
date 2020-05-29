@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.quanlyquancf.DoiTuong.TableBan;
 import com.example.quanlyquancf.DoiTuong.User;
 import com.example.quanlyquancf.MainActivity;
 import com.example.quanlyquancf.R;
@@ -31,6 +32,7 @@ public class LoginAccount extends AppCompatActivity {
     Button btnDn;
     EditText txtUser,txtPass;
     DatabaseReference user;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +42,6 @@ public class LoginAccount extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
         setContentView(R.layout.activity_login_account);
         AnhXa();
-
         btnDn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
