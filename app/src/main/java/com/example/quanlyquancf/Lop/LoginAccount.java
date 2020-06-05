@@ -62,9 +62,6 @@ public class LoginAccount extends AppCompatActivity {
                                     progressDialog.dismiss();
                                     Toast.makeText(getApplicationContext(),"Đăng nhập thành công",Toast.LENGTH_LONG).show();
                                     Intent intent = new Intent(getApplicationContext(), Table.class);
-                                    Bundle b = new Bundle();
-                                    b.putSerializable("u1",user_nv1);
-                                    intent.putExtras(b);
                                     startActivity(intent);
                                 }
                                 else

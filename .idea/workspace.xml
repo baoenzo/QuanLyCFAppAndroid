@@ -7,10 +7,10 @@
   </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb76b883-cb77-486b-a310-a023f2ba0d75" name="Default Changelist" comment="" />
+    <list default="true" id="4fe6afad-9e98-46d7-bbec-1a66b2a04adb" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,47 +30,11 @@
       </state>
     </system>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="resourceFile" />
-        <option value="layoutResourceFile_vertical" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectId" id="1c6vjz3Zn8z5HeMqvYAKTWhy6sY" />
+  <component name="ProjectId" id="1ctObH6RgHEczBT0WEoTrMn3ox1" />
   <component name="PropertiesComponent">
-    <property name="BundleExportedModule" value="app" />
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Nexus_5X_API_29_x86" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-05-29T02:57:00.172Z" />
-    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
-    <property name="project.structure.last.edited" value="Dependencies" />
-    <property name="project.structure.proportion" value="0.17" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\Programming\Mobile\Android\DoAn\QLCF\app\src\main\res\drawable-v24" />
-      <recent name="F:\Programming\Mobile\Android\DoAn\QLCF\app\src\main\res\menu" />
-      <recent name="F:\Programming\Mobile\Android\DoAn\QLCF\app\src\main\java\com\example\quanlyquancf" />
-      <recent name="F:\Programming\Mobile\Android\DoAn\QLCF\app\src\main\res\layout" />
-      <recent name="F:\Programming\Mobile\Android\DoAn\QLCF\app\src\main\res" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.example.quanlyquancf" />
-    </key>
-    <key name="android.template.packageName">
-      <recent name="com.example.quanlyquancf.Lop" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Programming\Mobile\Android\DoAn\QLCF\app\src\main\res\drawable" />
-      <recent name="F:\Programming\Mobile\Android\DoAn\QLCF\app\src\main\res\layout" />
-      <recent name="F:\Programming\Mobile\Android\DoAn\QLCF\app\src\main\java\com\example\quanlyquancf\MenuNavigation" />
-    </key>
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-06-05T08:19:45.646Z" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -149,23 +113,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cb76b883-cb77-486b-a310-a023f2ba0d75" name="Default Changelist" comment="" />
-      <created>1589861996808</created>
+      <changelist id="4fe6afad-9e98-46d7-bbec-1a66b2a04adb" name="Default Changelist" comment="" />
+      <created>1591344492250</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1589861996808</updated>
+      <updated>1591344492250</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="app">
-        <watch expression="txtUser.getText()" language="JAVA" />
-        <watch expression="user_nv1" language="JAVA" />
-        <watch expression="banList" language="JAVA" />
-        <watch expression="table.child(&quot;Table&quot;)" language="JAVA" />
-        <watch expression="banList.get(10).getName()" language="JAVA" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>

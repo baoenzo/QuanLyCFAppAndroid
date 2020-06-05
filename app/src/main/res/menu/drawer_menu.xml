@@ -2,26 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     >
     <group android:checkableBehavior="single">
-
         <item
-            android:id="@+id/nav_thongtin"
-            android:icon="@drawable/ic_profile"
-            android:title="Thông tin cá nhân" />
-        <item
-            android:id="@+id/nav_tinnhan"
+            android:id="@+id/nav_message"
             android:icon="@drawable/ic_message"
-            android:title="Tin nhắn" />
+            android:title="Message" />
         <item
-            android:id="@+id/nav_giaodich"
-            android:icon="@drawable/ic_giaodich2"
-            android:title="Lịch sử giao dịch" />
-        <item
-            android:id="@+id/nav_thongke"
-            android:icon="@drawable/ic_giaodich"
-            android:title="Thống kê" />
-        <item
-            android:id="@+id/nav_dangxuat"
-            android:icon="@drawable/ic_logout"
-            android:title="Đăng xuất" />
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_profile"
+            android:title="Profile" />
     </group>
 </menu>
