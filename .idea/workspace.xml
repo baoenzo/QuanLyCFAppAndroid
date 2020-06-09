@@ -30,11 +30,30 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectId" id="1ctObH6RgHEczBT0WEoTrMn3ox1" />
   <component name="PropertiesComponent">
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Nexus_5X_API_29_x86" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-06-05T08:19:45.646Z" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-06-09T09:06:20.572Z" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/assets/databases" />
+    <property name="project.structure.last.edited" value="Dependencies" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Programming\Mobile\Android\DoAn\QuanLyCF-Git\app\src\main\assets\databases" />
+      <recent name="F:\Programming\Mobile\Android\DoAn\QuanLyCF-Git\app\src\main\assets\database" />
+      <recent name="F:\Programming\Mobile\Android\DoAn\QuanLyCF-Git\app\src\main\res\drawable" />
+      <recent name="F:\Programming\Mobile\Android\DoAn\QuanLyCF-Git\app\src\main\res\layout" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">

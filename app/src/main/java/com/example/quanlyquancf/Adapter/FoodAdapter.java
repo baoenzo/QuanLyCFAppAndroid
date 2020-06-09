@@ -6,10 +6,12 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,18 +29,20 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
     ArrayList<Food> datashops;
     Context context;
     int dem;
+    private OnItemReClickListener mClick;
 
-    public FoodAdapter(ArrayList<Food> datashops, Context context) {
+
+    public FoodAdapter(ArrayList<Food> datashops, Context context, OnItemReClickListener mClick) {
         this.datashops = datashops;
         this.context = context;
-
+        this.mClick = mClick;
     }
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater= LayoutInflater.from(parent.getContext());
         View itemView = layoutInflater.inflate(R.layout.item_row,parent,false);
-        return new FoodAdapter.ViewHolder(itemView);
+        return new FoodAdapter.ViewHolder(itemView,mClick);
     }
 
     @Override
@@ -49,6 +53,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
         holder.textView2.setText(String.valueOf(datashops.get(position).getPrice()));
         holder.textView.setMaxLines(2);
         holder.textView.setEllipsize(TextUtils.TruncateAt.END);
+
     }
 
     @Override
@@ -56,15 +61,19 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
         return datashops.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+
+
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView textView,textView2;
         ImageView imageView;
-        public ViewHolder(@NonNull View itemView) {
+        OnItemReClickListener mmclick;
+        public ViewHolder(@NonNull View itemView,OnItemReClickListener mmclick) {
             super(itemView);
             imageView=(ImageView)itemView.findViewById(R.id.hinh);
             textView= (TextView)itemView.findViewById(R.id.txtname);
             textView2= (TextView)itemView.findViewById(R.id.txtprice);
-
+            this.mmclick = mmclick;
+            itemView.setOnClickListener(this);
 
             final EditText sl=(EditText) itemView.findViewById(R.id.soluong);
             Button tang=(Button)itemView.findViewById(R.id.btntang);
@@ -90,28 +99,16 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
                     }
                 }
             });
-//            final int[] a = {Integer.parseInt(sl.getText() + "")};
-//            tang.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    a[0]++;
-//                    sl.setText(a[0] +"");
-//                }
-//            });
-//
-//            Button giam=(Button)itemView.findViewById(R.id.btngiam);
-//            giam.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    if(a[0] > 0)
-//                    {
-//                        a[0]--;
-//                        sl.setText(a[0] +"");
-//                    }
-//                }
-//            });
-
         }
+
+        @Override
+        public void onClick(View v) {
+        mmclick.OnNoteClick(getAdapterPosition());
+        }
+    }
+
+    public  interface OnItemReClickListener{
+        void OnNoteClick(int position);
     }
 
 
