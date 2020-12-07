@@ -3,12 +3,25 @@
     >
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_message"
-            android:icon="@drawable/ic_message"
-            android:title="Message" />
-        <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_profile"
-            android:title="Profile" />
+            android:title="Thông tin" />
+        <item
+            android:id="@+id/nav_message"
+            android:icon="@drawable/ic_message"
+            android:title="Chat bot" />
+        <item
+            android:id="@+id/nav_thongke"
+            android:icon="@drawable/ic_giaodich"
+            android:title="Thống kê" />
+        <item
+            android:id="@+id/nav_addfood"
+            android:icon="@drawable/ic_giaodich"
+            android:title="Thêm món" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="Đăng xuất" />
+
     </group>
 </menu>

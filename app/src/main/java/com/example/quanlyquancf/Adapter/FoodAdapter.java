@@ -2,6 +2,8 @@ package com.example.quanlyquancf.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.icu.text.NumberFormat;
+import android.os.Build;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.quanlyquancf.DoiTuong.Food;
@@ -24,6 +27,7 @@ import com.example.quanlyquancf.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
     ArrayList<Food> datashops;
@@ -41,16 +45,21 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater= LayoutInflater.from(parent.getContext());
-        View itemView = layoutInflater.inflate(R.layout.item_row,parent,false);
+        View itemView = layoutInflater.inflate(R.layout.item_product_list,parent,false);
         return new FoodAdapter.ViewHolder(itemView,mClick);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        Picasso.with(context).load(datashops.get(position).getImage()).into(holder.imageView);
+        Picasso.get().load(datashops.get(position).getImage()).into(holder.imageView);
         holder.textView.setText(datashops.get(position).getName());
-        holder.textView2.setText(String.valueOf(datashops.get(position).getPrice()));
+
+        Locale locale = new Locale("vi","VN");
+        NumberFormat ft = NumberFormat.getCurrencyInstance(locale);
+        int price = Integer.parseInt(String.valueOf(datashops.get(position).getPrice()));
+        holder.textView2.setText(ft.format(price));
         holder.textView.setMaxLines(2);
         holder.textView.setEllipsize(TextUtils.TruncateAt.END);
 

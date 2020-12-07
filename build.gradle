@@ -19,8 +19,9 @@ buildscript {
 allprojects {
     repositories {
         google()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
         jcenter()
-        
+        maven { url 'https://jitpack.io' }
     }
 }
 

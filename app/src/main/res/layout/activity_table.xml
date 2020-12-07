@@ -19,7 +19,7 @@
         android:layout_height="?attr/actionBarSize"
         android:id="@+id/tlb1"
         android:elevation="4dp"
-        android:background="#E31433FA"
+        android:background="#4BA157"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         >
@@ -54,7 +54,8 @@
                     android:layout_below="@id/tlb1"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:id="@+id/tb1">
+                    android:id="@+id/tb1"
+                    android:background="#EFEFEF">
                 </TableLayout>
             </ScrollView>
         </FrameLayout>

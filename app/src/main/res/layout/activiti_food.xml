@@ -12,6 +12,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:id="@+id/parent"
         android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
@@ -19,7 +20,7 @@
             android:layout_height="?attr/actionBarSize"
             android:id="@+id/tlb1"
             android:elevation="4dp"
-            android:background="#E31433FA"
+            android:background="#4BA157"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             >
@@ -44,42 +45,44 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tổng SL: "
+                android:text="Đang chọn: "
                 android:textSize="20dp"
                 android:layout_weight="0"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/SL"
+                android:id="@+id/txtDangChon"
+                android:textColor="#03A9F4"
                 android:textSize="20dp"
                 android:layout_weight="2"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Bill"
-                android:textSize="20dp"
-                android:id="@+id/bill"
-                android:background="@drawable/bogoc"
-                android:textAllCaps="false"/>
+<!--            <Button-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="Bill"-->
+<!--                android:textSize="20dp"-->
+<!--                android:id="@+id/bill"-->
+<!--                android:background="@drawable/bogoc"-->
+<!--                android:textAllCaps="false"/>-->
             <!--                android:background="@drawable/bo_goc"-->
 
-            />
 
-            <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="end"
-                android:id="@+id/category"
-                android:layout_weight="1"
-                />
+
+<!--            <Spinner-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_gravity="end"-->
+<!--                android:id="@+id/category"-->
+<!--                android:layout_weight="1"-->
+<!--                />-->
         </LinearLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/thongke"
-            android:layout_weight="1"
+            android:layout_weight="50"
 
             ></androidx.recyclerview.widget.RecyclerView>
 
@@ -88,28 +91,32 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:orientation="horizontal"
-            android:background="#FFEB3B">
+            android:background="#4BA157">
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:drawableLeft="@drawable/back"
-                android:text="Chọn lại"
+                android:drawableLeft="@drawable/back2"
+                android:text="Trở về"
                 android:textSize="20dp"
-                android:background="@drawable/designbottom"
+                android:textColor="#fff"
+                android:id="@+id/btnChonLai"
+                android:background="@drawable/designbutton"
                 android:textAllCaps="false"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Thanh toán"
+                android:text="Hóa đơn"
                 android:textSize="20dp"
+                android:textColor="#fff"
                 android:layout_marginLeft="50dp"
-                android:background="@drawable/designbottom"
-                android:drawableRight="@drawable/thanhtoan"
-                android:textAllCaps="false"/>
+                android:background="@drawable/designbutton"
+                android:drawableRight="@drawable/pay1"
+                android:textAllCaps="false"
+                android:id="@+id/btnXNBill"/>
         </LinearLayout>
 
 

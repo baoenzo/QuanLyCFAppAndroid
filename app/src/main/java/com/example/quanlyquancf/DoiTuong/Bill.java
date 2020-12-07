@@ -1,6 +1,8 @@
 package com.example.quanlyquancf.DoiTuong;
 
-public class Bill {
+import java.io.Serializable;
+
+public class Bill implements Serializable {
     private String ProductID;
     private String ProductName;
     private String  Quantity;
@@ -12,7 +14,7 @@ public class Bill {
         Quantity = quantity;
         Price = price;
     }
-
+    public  Bill(){}
     public String getProductID() {
         return ProductID;
     }
